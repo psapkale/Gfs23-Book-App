@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/src/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/src/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Book-App</title>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body>
+    <div class="wrapper--body">
+      <!-- partials header -->
+      <include src="./partials/header.html"></include>
+      <include src="./partials/modalSignUp.html"></include>
+      <include src="./partials/menu-modal.html"></include>
+
+      <!-- home -->
+      <main class="main--wrapper">
+        <section>
+          <div class="container home-container">
+            <aside class="sidenav">
+              <include src="./partials/categories.html"></include>
+            </aside>
+            <div class="main">
+              <include src="./partials/home.html"></include>
+              <include src="./partials/home-categories.html"></include>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- pop-up-modal -->
+      <include src="./partials/modal-pop-up.html"></include>
+
+      <!-- scroll-up  -->
+      <button type="button" class="btn-up btn-up_hide"></button>
+
+      <!-- footer -->
+      <include src="./partials/footer.html"></include>
+
+      <!-- modal-footer -->
+      <include src="./partials/modal_footer.html"></include>
+    </div>
+
+    <!-- scripts  -->
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

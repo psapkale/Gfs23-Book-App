@@ -1,0 +1,176 @@
+.books__main-title {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: calc(38 / 32);
+  letter-spacing: -0.04em;
+  color: $color-dark;
+  margin-bottom: 40px;
+
+  @media screen and(min-width: $tablet) {
+    font-size: 48px;
+    line-height: calc(52 / 48);
+  }
+
+  &-attribute {
+    color: $color-blue;
+  }
+}
+
+.books__list {
+  margin-bottom: 40px;
+
+  &-title {
+    display: block;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-text-grey;
+
+    margin-bottom: 18px;
+
+    @media screen and(min-width: $tablet) {
+      line-height: calc(24 / 14);
+    }
+  }
+}
+
+.books__card {
+  &-container {
+    margin-bottom: 8px;
+
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 25px;
+
+      margin-bottom: 20px;
+    }
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+
+  &-title-img {
+    border-radius: 8px;
+    width: 280px;
+    height: 406px;
+
+    @media screen and(min-width: $phone) {
+      width: 335px;
+      height: 485px;
+    }
+
+    @media screen and(min-width: $tablet) {
+      width: 218px;
+      height: 316px;
+    }
+    @media screen and(min-width: $desktop) {
+      height: 256px;
+      width: 180px;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(18 / 16);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $color-dark;
+
+    margin-bottom: 4px;
+
+    @media screen and(min-width: $tablet) {
+      width: 218px;
+    }
+    @media screen and(min-width: $desktop) {
+      width: 180px;
+    }
+  }
+
+  &-author {
+    font-style: italic;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: -0.04em;
+
+    color: $color-text-grey;
+  }
+}
+
+.books__btn {
+  display: block;
+  margin-left: auto;
+  padding: 14px 28px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  color: $color-dark;
+  background-color: transparent;
+  border: 2px solid $color-blue;
+  border-radius: 40px;
+
+  transition-property: background-color, color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}
+
+.books__item-link {
+  @media screen and(min-width: $desktop) {
+    flex-basis: calc((100% - 100px)/5);
+  }
+  &:hover .books__overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.books__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  border-radius: 0 0 8px 8px;
+
+  width: 100%;
+  height: 27%;
+  opacity: 0;
+
+  background: $color-hover-activ;
+  user-select: none;
+
+  transition-duration: $transition-duration;
+  transition-timing-function: $cubic;
+
+  &-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+
+    color: $color-dark;
+  }
+}
